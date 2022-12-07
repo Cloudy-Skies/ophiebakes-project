@@ -8,14 +8,13 @@ class Customer extends db_connection
     public function add_customer_cls($full_name, $email, $pass, $country, $city, $contact, $image)
     {
         //new user has user role 2
-        $user_role = '2';
 
         $sql = "INSERT INTO customer(customer_name,customer_email,customer_pass,
         customer_country,customer_city,customer_contact,
         customer_image,user_role) 
         VALUES 
         ('$full_name','$email','$pass','$country','$city',
-        '$contact','$image','$user_role')";
+        '$contact','$image',2)";
         // print $sql;
         return $this->query($sql);
     }
@@ -29,7 +28,6 @@ class Customer extends db_connection
         return $this->query($sql);
     }
 
-    //TODO
     function delete_customer_cls($id)
     {
         $sql = "DELETE from customer WHERE customer_id=$id";
