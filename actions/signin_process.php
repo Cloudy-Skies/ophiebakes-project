@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
             }
             
             if ($_SESSION['user_role'] == 2){
-                header("Location: ../view/cart.php");// this will take the customer to a new page
+                header("Location: ../index.php");// this will take the customer to a new page
                 }
         }
         
