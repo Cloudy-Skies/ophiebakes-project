@@ -6,7 +6,7 @@ require('../settings/core.php');
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>Sign in</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -24,21 +24,21 @@ require('../settings/core.php');
     <meta name="author" content="codedthemes" />
     <!-- Favicon icon -->
 
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../fontawesome/assets/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/assets/css/bootstrap/css/bootstrap.min.css">
     <!-- waves.css -->
-    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../fontawesome/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
     <!-- themify-icons line icon -->
-    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/assets/icon/icofont/css/icofont.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/assets/icon/font-awesome/css/font-awesome.min.css">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/assets/css/style.css">
 </head>
 
 <body themebg-pattern="theme1">
@@ -106,7 +106,7 @@ require('../settings/core.php');
 
                     <form class="md-float-material form-material" action="../actions/signin_process.php" method="post">
                         <div class="text-center">
-                            <img src="assets/images/logo.png" alt="logo.png">
+                            <img src="../fontawesome/assets/images/logo.png" alt="logo.png">
                         </div>
                         <div class="auth-box card">
                             <div class="card-block">
@@ -142,12 +142,12 @@ require('../settings/core.php');
                                 </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <button type="button"
+                                        <button type="submit" name="submit"
                                             class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign
                                             in</button>
                                     </div>
                                     <div class="col-md-12">
-                                        <p>Don't have an account? <strong><a href="true-auth-sign-up.html">Sign up
+                                        <p>Don't have an account? <strong><a href="true-auth-sign-up.php">Sign up
                                                     here</a></strong></p>
                                     </div>
                                 </div>
@@ -155,11 +155,12 @@ require('../settings/core.php');
                                 <div class="row">
                                     <div class="col-md-10">
                                         <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                        <p class="text-inverse text-left"><a href="index.html"><b>Back to
+                                        <p class="text-inverse text-left"><a href="../index.php"><b>Back to
                                                     website</b></a></p>
                                     </div>
                                     <div class="col-md-2">
-                                        <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                                        <img src="../fontawesome/assets/images/auth/Logo-small-bottom.png"
+                                            alt="small-logo.png">
                                     </div>
                                 </div>
                             </div>
@@ -183,31 +184,31 @@ require('../settings/core.php');
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <img src="../fontawesome/assets/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <img src="../fontawesome/assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <img src="../fontawesome/assets/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <img src="../fontawesome/assets/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
+                    <img src="../fontawesome/assets/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -218,24 +219,24 @@ require('../settings/core.php');
 <![endif]-->
     <!-- Warning Section Ends -->
     <!-- Required Jquery -->
-    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>
-    <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/jquery-ui/jquery-ui.min.js "></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/bootstrap/js/bootstrap.min.js "></script>
     <!-- waves js -->
-    <script src="assets/pages/waves/js/waves.min.js"></script>
+    <script src="../fontawesome/assets/pages/waves/js/waves.min.js"></script>
     <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
     <!-- modernizr js -->
-    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/SmoothScroll.js"></script>
+    <script src="../fontawesome/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
     <!-- i18next.min.js -->
     <script type="text/javascript" src="bower_components/i18next/js/i18next.min.js"></script>
     <script type="text/javascript" src="bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
     <script type="text/javascript"
         src="bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
-    <script type="text/javascript" src="assets/js/common-pages.js"></script>
+    <script type="text/javascript" src="../fontawesome/assets/js/common-pages.js"></script>
 </body>
 
 </html>

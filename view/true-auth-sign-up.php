@@ -6,7 +6,7 @@ require('../settings/core.php');
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>Sign Up</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -116,18 +116,18 @@ require('../settings/core.php');
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group form-primary">
-                                            <input type="text" name="fname" class="form-control" required="">
+                                            <input type="text" name="fullname" class="form-control" required="">
                                             <span class="form-bar"></span>
-                                            <label class="float-label">First Name</label>
+                                            <label class="float-label">Full Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <!-- <div class="col-sm-6">
                                         <div class="form-group form-primary">
                                             <input type="text" name="lname" class="form-control" required="">
                                             <span class="form-bar"></span>
                                             <label class="float-label">Last Name</label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <!-- <div class="form-group form-primary">
@@ -136,15 +136,24 @@ require('../settings/core.php');
                                     <label class="float-label">Choose Username</label>
                                 </div> -->
                                 <div class="form-group form-primary">
+                                    <input type="text" name="country" class="form-control" required="">
+                                    <span class="form-bar"></span>
+                                    <label class="float-label">Country</label>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <input type="text" name="city" class="form-control" required="">
+                                    <span class="form-bar"></span>
+                                    <label class="float-label">City</label>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <input type="tel" name="contact" class="form-control" required="">
+                                    <span class="form-bar"></span>
+                                    <label class="float-label">Contact</label>
+                                </div>
+                                <div class="form-group form-primary">
                                     <input type="text" name="email" class="form-control" required="">
                                     <span class="form-bar"></span>
                                     <label class="float-label">Your Email Address</label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Upload File</label>
-                                    <div class="col-sm-10">
-                                        <input type="file" class="form-control">
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -156,7 +165,7 @@ require('../settings/core.php');
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group form-primary">
-                                            <input type="password" name="confirm-password" class="form-control"
+                                            <input type="password" name="confirm_password" class="form-control"
                                                 required="">
                                             <span class="form-bar"></span>
                                             <label class="float-label">Confirm Password</label>
@@ -189,13 +198,12 @@ require('../settings/core.php');
                                 </div> -->
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <button type="submit"
-                                            class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"
-                                            onclick="">Sign
+                                        <button type="submit" name='submit'
+                                            class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign
                                             up now</button>
                                     </div>
                                     <div class="col-md-12">
-                                        <p>Already have an account? <a href="true-auth-normal-sign-in.html"><strong>Sign
+                                        <p>Already have an account? <a href="true-auth-normal-sign-in.php"><strong>Sign
                                                     in here</strong></a></p>
                                     </div>
                                 </div>
@@ -203,7 +211,7 @@ require('../settings/core.php');
                                 <div class="row">
                                     <div class="col-md-10">
                                         <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                        <p class="text-inverse text-left"><a href="../index.php"><b>Back to
+                                        <p class="text-inverse text-left"><a href="../../index.php"><b>Back to
                                                     website</b></a></p>
                                     </div>
                                     <div class="col-md-2">
