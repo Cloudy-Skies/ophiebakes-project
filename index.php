@@ -11,13 +11,11 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cake | Template</title>
+    <title>Healthy Oven Bakery</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -52,24 +50,31 @@
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+            <a href="index.php"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>EUR</li>
-                        <li>USD</li>
-                    </ul>
-                </li>
-                <li>ENG <span class="arrow_carrot-down"></span>
+
+                <!-- <li>ENG <span class="arrow_carrot-down"></span>
                     <ul>
                         <li>Spanish</li>
                         <li>ENG</li>
                     </ul>
+                </li> -->
+                <li> Sign in / Sign up <span class="arrow_carrot-down"></span>
+                    <ul>
+                        <li><a href="view/true-auth-sign-up.php">Sign up</a></li>
+                        <li><a href="view/true-auth-normal-sign-in.php">Sign in</a></li>
+                    </ul>
                 </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+
+                <!-- <li><a href="view/true-auth-normal-sign-in.php">Sign in</a> <span class="arrow_carrot-down"></span>
+                    <ul>
+                        <li><a href="view/true-auth-sign-up.php">Sign up</a></li>
+
+                    </ul>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -96,12 +101,11 @@
                                             <li>ENG</li>
                                         </ul>
                                     </li>
-                                    <li><a href="view/true-auth-normal-sign-in.php">Sign in</a> <span
-                                            class="arrow_carrot-down"></span></li>
+                                    <li><a href="view/true-auth-normal-sign-in.php">Sign in</a> <span class="arrow_carrot-down"></span></li>
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                                <a href="index.php"><img src="img/logo.png" alt=""></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
@@ -124,10 +128,10 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
+                            <li class="active"><a href="index.php">Home</a></li>
+                            <!-- <li><a href="./about.html">About</a></li> -->
                             <li><a href="view/shop.php">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <!-- <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
@@ -136,9 +140,9 @@
                                     <li><a href="./Class.html">Class</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            </li> -->
+                            <!-- <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -432,8 +436,7 @@
                 </div>
             </div>
             <div class="class__video set-bg" data-setbg="img/class-video.jpg">
-                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
-                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
             </div>
         </div>
     </section>
@@ -736,10 +739,7 @@
             </div>
         </div>
         <div class="map__iframe">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.559348753525!2d-0.06784580000000001!3d5.631868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf877249e2eb43%3A0x116358f169db2f3a!2sHealthy%20Oven%20Bakery!5e0!3m2!1sen!2sgh!4v1670336769749!5m2!1sen!2sgh"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.559348753525!2d-0.06784580000000001!3d5.631868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf877249e2eb43%3A0x116358f169db2f3a!2sHealthy%20Oven%20Bakery!5e0!3m2!1sen!2sgh!4v1670336769749!5m2!1sen!2sgh" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <!-- Map End -->
@@ -792,9 +792,8 @@
                         <p class="copyright__text text-white">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>
-                            document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart"
-                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>

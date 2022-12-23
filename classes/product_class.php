@@ -13,20 +13,25 @@ class Product extends db_connection
     //     return $this->query($sql);
     // }
     //add product category
-    public function add_product_category($category)
+    public function add_category($category)
     {
-        $sql = "INSERT into categories(cat_name) values('$category')";
-        return $this->query($sql);
+        //returns true or false
+        return $this->query("insert into categories(cat_name) values('$category')");
     }
     //add new product
-    public function add_product($category, $brand, $title, $price, $desc, $image, $keywords)
+    public function add_product($category,$title, $price, $desc, $image, $keywords)
     {
         $sql = "INSERT into products
-            (product_cat, product_brand ,product_title, 
+            (product_cat, product_title, 
             product_price, product_desc,product_image, 
-            product_keywords ) values('$category','$brand','$title','$price','$desc','$image','$keywords')";
+            product_keywords ) values('$category','$title','$price','$desc','$image','$keywords')";
         return $this->query($sql);
     }
+
+    // function add_category($category){
+    //     // return true or false
+    //     return $this->query("insert into categories(cat_name) values('$category')");
+    // }
 
 
     //Selects:
@@ -45,7 +50,7 @@ class Product extends db_connection
     //select all products
     function select_all_products()
     {
-        return $this->db_fetch_all("SELECT * from products");
+        return $this->db_fetch_all("SELECT * from products inner join categories on product_cat = cat_id");
     }
 
 
@@ -58,13 +63,19 @@ class Product extends db_connection
     //select one category
     function select_one_category($id)
     {
-        return $this->db_fetch_one("SELECT * from brands where cat_id='$id'");
+        return $this->db_fetch_one("SELECT * from categories where cat_id='$id'");
     }
+
+    function select_one_category_name($name)
+    {
+        return $this->db_fetch_one("SELECT cat_name from categories where cat_name='$name'");
+    }
+    
 
     //select one product
     function select_one_product($id)
     {
-        return $this->db_fetch_one("SELECT * from brands where product_id='$id'");
+        return $this->db_fetch_one("SELECT * from products inner join categories on product_cat = cat_id where product_id='$id'");
     }
 
     //EDITS
@@ -74,6 +85,11 @@ class Product extends db_connection
         return $this->query("UPDATE brands set brand_name='$name' where brand_id='$id'");
     }
 
+    // function update_one_product($id, $cat,$title,$price,$desc,$image,$keywords)
+    // {
+    //     return $this->query("UPDATE products set product_cat='$cat',product_title='$title',product_price='$price',product_desc='$desc',product_image='$image',product_keywords='$keywords'  where product_id='$id'");
+    // }
+
     //edit one category
     function edit_category($id, $name)
     {
@@ -81,11 +97,11 @@ class Product extends db_connection
     }
 
     //edit one product
-    function edit_product($id, $category, $brand, $title, $price, $desc, $keywords)
+    function edit_product($id, $category, $title, $price, $desc,$image, $keywords)
     {
         return $this->query("UPDATE products set 
             product_cat='$category', product_title='$title',product_price='$price', 
-            product_desc='$desc', product_keywords='$keywords' where cat_id='$id'");
+            product_desc='$desc',product_image='$image', product_keywords='$keywords' where product_id='$id'");
     }
 
     //delete one product

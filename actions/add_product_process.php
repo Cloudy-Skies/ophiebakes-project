@@ -21,8 +21,7 @@ if(isset($_POST['addProduct'])){
     if ($result){
         header("Location: ../admin/view_product.php");
     }else{
-        // echo ("<script>alert('Could not add the product, try again.'); window.location.href = '../admin/add_product.php';</script>");
-        echo (var_dump($result));
+        echo ("<script>alert('Could not add the product, try again.'); window.location.href = '../admin/add_product.php';</script>");
     }
 
 }

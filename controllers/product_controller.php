@@ -13,20 +13,19 @@ require('../classes/product_class.php');
 // }
 
 //add product category
-function add_product_category_ctr($category)
+function add_category_controller($category)
 {
     //instantiating a product class
     $add_product_cat = new Product();
-    return $add_product_cat->add_product_category($category);
+    return $add_product_cat->add_category($category);
 }
 
 //add product
-function add_product_controller($category, $brand, $title, $price, $desc, $image, $keywords)
+function add_product_controller($category, $title, $price, $desc, $image, $keywords)
 {
-    $add_product_ctr = new Product();
-    return $add_product_ctr->add_product(
+    $product_instance = new Product();
+    return $product_instance->add_product(
         $category,
-        $brand,
         $title,
         $price,
         $desc,
@@ -68,8 +67,16 @@ function select_one_brand_ctr($id)
 //select one category
 function select_one_category_ctr($id)
 {
-    $product_instance = new Product();
-    return $product_instance->select_one_category($id);
+    $category_instance = new Product();
+    return $category_instance->select_one_category($id);
+}
+
+function select_one_categoryname_controller($category)
+{
+    // create an instance of the Product class
+    $category_instance = new Product();
+    // call the select_one_categoryname method from the class
+    return $category_instance->select_one_category_name($category);
 }
 
 //select one product
@@ -95,14 +102,30 @@ function edit_category_ctr($id, $name)
 }
 
 //edit one product
-function edit_product_ctr($id, $category, $brand, $title, $price, $desc, $keywords)
+function edit_product_ctr($id, $category, $title, $price, $desc,$image, $keywords)
 {
     $product_instance = new Product();
-    return $product_instance->edit_product($id, $category, $brand, $title, $price, $desc, $keywords);
+    return $product_instance->edit_product($id, $category,  $title, $price, $desc,$image, $keywords);
 }
 
 function search_product_ctr($searchterm)
 {
     $product_instance = new Product();
     return $product_instance->search_products($searchterm);
+}
+
+function delete_one_category_ctr($cat_id)
+{
+    //create an instance of the product class
+    $product_instance = new Product();
+    //call the delete_one_category method from the class
+    return $product_instance->delete_one_category($cat_id);
+}
+
+function delete_one_product_ctr($product_id)
+{
+    //create an instance of the product class
+    $product_instance = new Product();
+    //call the delete_one_category method from the class
+    return $product_instance->delete_one_product($product_id);
 }

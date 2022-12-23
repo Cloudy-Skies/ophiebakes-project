@@ -245,7 +245,7 @@ if (check_permission() != 1) {
                                     <div class="col-md-4">
                                         <ul class="breadcrumb-title">
                                             <li class="breadcrumb-item">
-                                                <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                             </li>
@@ -267,8 +267,8 @@ if (check_permission() != 1) {
                                                 <h5>Table of Products</h5>
                                             </div>
                                             <div class="card-block table-border-style">
-                                                <div class="table-borderless">
-                                                    <table class="table">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover zero-configuration">
                                                         <thead>
                                                             <tr>
                                                                 <th>Product ID</th>

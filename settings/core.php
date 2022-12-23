@@ -5,17 +5,21 @@ session_start();
 //for header redirection
 ob_start();
 
+//get the name of the current page
+$current_file = $_SERVER['SCRIPT_NAME']; 
+
+
+
 //funtion to check for login
 function check_login(){
 	//check if login session exit
 	if (!isset($_SESSION['user_id'])) 
 	{
 		//redirect to login page
-    	header('Location: ../login/login.php');
+    	header('Location: ../view/true-auth-normal-sign-in.php');
 	}
 }
 
-//function to get user ID
 
 
 //function to check for role (admin, customer, etc)
@@ -26,6 +30,3 @@ function check_permission(){
 		return $_SESSION['user_role'];
 	}
 }
-
-
-?>

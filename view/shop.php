@@ -1,5 +1,7 @@
 <?php
 include('../controllers/product_controller.php');
+$products = select_all_products_ctr();
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -19,39 +21,36 @@ include('../controllers/product_controller.php');
         rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../css/barfiller.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__cart">
-            <div class="offcanvas__cart__links">
-                <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            </div>
+
             <div class="offcanvas__cart__item">
-                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                <a href="view_cart.php"><img src="../img/icon/cart.png" alt=""> <span>0</span></a>
                 <div class="cart__price">Cart: <span>$0.00</span></div>
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="../index.php"><img src="../img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
@@ -68,7 +67,8 @@ include('../controllers/product_controller.php');
                         <li>ENG</li>
                     </ul>
                 </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                <li><a href="view/true-auth-normal-sign-in.php">Sign in</a> <span class="arrow_carrot-down"></span>
+                </li>
             </ul>
         </div>
     </div>
@@ -82,33 +82,16 @@ include('../controllers/product_controller.php');
                     <div class="col-lg-12">
                         <div class="header__top__inner">
                             <div class="header__top__left">
-                                <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
-                                        </ul>
-                                    </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
-                                </ul>
+
                             </div>
                             <div class="header__logo">
-                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                                <a href="../index.php"><img src="../img/logo.png" alt=""></a>
                             </div>
                             <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                                </div>
+
                                 <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
+                                    <a href="view_cart.php"><img src="../img/icon/cart.png" alt=""> <span>0</span></a>
+                                    <div class="cart__price">Cart: <span><a href="view_cart.php">$0.00</span></div>
                                 </div>
                             </div>
                         </div>
@@ -122,21 +105,9 @@ include('../controllers/product_controller.php');
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li class="active"><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./wisslist.html">Wisslist</a></li>
-                                    <li><a href="./Class.html">Class</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="../index.php">Home</a></li>
+                            <li class="active"><a href="./shop.php">Shop</a></li>
+
                         </ul>
                     </nav>
                 </div>
@@ -156,7 +127,7 @@ include('../controllers/product_controller.php');
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./index.html">Home</a>
+                        <a href="../index.php">Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
@@ -171,7 +142,7 @@ include('../controllers/product_controller.php');
             <div class="shop__option">
                 <div class="row">
                     <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
+                        <!-- <div class="shop__option__search">
                             <form action="#">
                                 <select>
                                     <option value="">Categories</option>
@@ -182,239 +153,67 @@ include('../controllers/product_controller.php');
                                 <input type="text" placeholder="Search">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <!-- <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a> -->
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+                <div class='col-lg-6 col-md-8 col-sm-8'>
+                    <?php
+                    foreach ($products as $product) {
+                        echo ("<div class='product__item'>
+                        <div class='product__item__pic set-bg'
+                            data-setbg='../images/products/{$product["product_image"]}'>
+                            <div class='product__label'>
+                                <span>{$product['cat_name']}</span>
                             </div>
                         </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dozen Cupcakes</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
+                        <div class='product__item__text'>
+                            <h6><a href='#'>{$product['product_title']}</a></h6>
+                            <div class='product__item__price'>GHC: {$product['product_price']} .00</div>
+                            <div class='cart_add'>
+                                <form method='post' action='../actions/add_to_cart.php'>
+                                <input class='form-control' type='hidden' name='quantity' value='1'>
+
+                                    <input type='hidden' name='product_id' value= '{$product['product_id']}'>
+                    <br><button name='add_cart' type='submit' class='btn email=''
+                  btn-success' ;>Add to cart</button>
+                </div>
+            </div>
+        </div>");
+                        # code...
+                    }
+
+                    ?>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="shop__last__option">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="shop__pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><span class="arrow_carrot-right"></span></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookies and Cream</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookie Dough</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">German Chocolate</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dulce De Leche</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Mississippi Mud</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-9.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
-                            <div class="product__item__price">$98.85</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-10.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET CELTICS</a></h6>
-                            <div class="product__item__price">$5.77</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-11.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
-                            <div class="product__item__price">$26.41</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-12.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">PALE YELLOW SWEET</a></h6>
-                            <div class="product__item__price">$22.47</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="shop__last__text">
+                        <p>Showing 1-9 of 10 results</p>
                     </div>
                 </div>
             </div>
-            <div class="shop__last__option">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
     <!-- Shop Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <footer class="footer set-bg" data-setbg="../img/footer-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -430,7 +229,7 @@ include('../controllers/product_controller.php');
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="../img/footer-logo.png" alt=""></a>
                         </div>
                         <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore dolore magna aliqua.</p>
@@ -494,15 +293,18 @@ include('../controllers/product_controller.php');
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/jquery.barfiller.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>ript src="../js/main.js"></script>
 </body>
 
 </html>
